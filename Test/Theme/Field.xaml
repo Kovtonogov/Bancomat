@@ -1,0 +1,80 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style TargetType="{x:Type TextBox}"
+           x:Key="TextBox">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border CornerRadius="25" BorderBrush="CadetBlue" BorderThickness="2"
+                            Background="LightPink" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" >
+                            <Grid VerticalAlignment="Stretch"
+                                  HorizontalAlignment="Stretch">
+                                <TextBox Text="{TemplateBinding Text}"
+                                    VerticalAlignment="Center"
+                                           Foreground="White" 
+                                           FontWeight="Bold" 
+                                           FontStyle="Italic"
+                                           Background="Transparent"
+                                         BorderThickness="0"
+                                         Width="{TemplateBinding Width}" 
+                                         TextAlignment="Center"
+                                         x:Name="LogBox"/>
+                                <TextBlock IsHitTestVisible="False" 
+                                           Text ="Log In"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           Margin="10,0,0,0"
+                                           FontSize="20"
+                                           Foreground="White">
+                                    <TextBlock.Style>
+                                        <Style TargetType="{x:Type TextBlock}">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Text, ElementName=LogBox}" Value="">
+                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                            <Setter Property="Visibility" Value="Hidden"/>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+        </Style.Setters>
+    </Style>
+    <Style TargetType="{x:Type PasswordBox}"
+           x:Key="PasswordBox">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="PasswordBox">
+                        <Border CornerRadius="25" BorderBrush="CadetBlue" BorderThickness="2"
+                             Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" Background="LightPink" >
+                            <Grid VerticalAlignment="Stretch"
+                                  HorizontalAlignment="Stretch">
+                                <PasswordBox 
+                                    VerticalAlignment="Center"
+                                    HorizontalContentAlignment="Center"
+                                           Foreground="White" 
+                                           Background="Transparent"
+                                         BorderThickness="0"
+                                         Width="{TemplateBinding Width}" Margin="10,0,0,0"
+                                    x:Name="PasBox"/>
+                              
+
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+        </Style.Setters>
+    </Style>
+
+</ResourceDictionary>

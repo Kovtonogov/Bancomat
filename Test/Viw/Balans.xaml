@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="Test.Viw.Balans"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Test.Viw"
+             xmlns:vm="clr-namespace:Test.VM"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="400">
+    
+    
+    <Border Name="loyaut" Background="#FF332E66" CornerRadius="20"   >
+
+        <Grid x:Name="client">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="0.1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="0.1*"/>
+            </Grid.ColumnDefinitions>      
+                      
+
+            <Button x:Name="Back"
+                    Grid.Row="10" 
+                    Grid.Column="1" 
+                    Grid.ColumnSpan="3" 
+                    Content="Back" 
+                    Style="{StaticResource Button}" 
+                    FontSize="28"
+                    Command="{Binding Back}"/>
+        </Grid>
+
+    </Border>
+</UserControl>
