@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Test.Viw"
              xmlns:vm="clr-namespace:Test.VM"
              mc:Ignorable="d" 
-             d:DesignHeight="700" d:DesignWidth="400">
+            Height="700" Width="450">
     
     
     <Border Name="loyaut" Background="#FF332E66" CornerRadius="20"   >
@@ -43,7 +43,16 @@
                     Content="Back" 
                     Style="{StaticResource Button}" 
                     FontSize="28"
-                    Command="{Binding Back}"/>
+                    Command="{Binding Back}"/>           
+                       
+            <Button Grid.Row="4" 
+                    Grid.Column="1" 
+                    Grid.ColumnSpan="3" 
+                    Content="{Binding BalansM}" 
+                    Style="{StaticResource Button}" 
+                    FontSize="28"/>         
+                       
+            
         </Grid>
 
     </Border>

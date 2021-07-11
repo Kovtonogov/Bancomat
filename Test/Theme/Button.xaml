@@ -23,5 +23,73 @@
             </Setter>            
         </Style.Setters>
     </Style>
+<Style TargetType="{x:Type Button}"
+           x:Key="Button1">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="25" BorderBrush="CadetBlue" BorderThickness="2"
+                            Background="#FF32B680" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" >
+                            <Grid VerticalAlignment="Center"
+                                  HorizontalAlignment="Center"
+                                  Background="Transparent">
+                                <TextBlock Text="{TemplateBinding Content}"
+                                    VerticalAlignment="Center" TextAlignment="Center" Foreground="White" FontWeight="Bold" FontStyle="Italic" TextWrapping="Wrap" />
+
+
+                            </Grid>                            
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>            
+        </Style.Setters>
+    </Style>
+    
+<Style TargetType="{x:Type Button}"
+           x:Key="ButtonId">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="25" BorderBrush="CadetBlue" BorderThickness="2"
+                            Background="#FF4670B8" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" >
+                            <Grid VerticalAlignment="Center"
+                                  HorizontalAlignment="Center"
+                                  Background="Transparent">
+                                <TextBlock Text="{Binding Users2}"
+                                    VerticalAlignment="Center" TextAlignment="Center" Foreground="White" FontWeight="Bold" FontStyle="Italic" TextWrapping="Wrap" />
+
+
+                            </Grid>                            
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>            
+        </Style.Setters>
+    </Style>
+
+    <Style TargetType="{x:Type Button}"
+           x:Key="ButtonId2">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="25" BorderBrush="CadetBlue" BorderThickness="2"
+                            Background="#FF4670B8" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" >
+                            <Grid VerticalAlignment="Center"
+                                  HorizontalAlignment="Center"
+                                  Background="Transparent">
+                                <TextBlock Text="{Binding Sum}"
+                                    VerticalAlignment="Center" TextAlignment="Center" Foreground="White" FontWeight="Bold" FontStyle="Italic" TextWrapping="Wrap" />
+
+
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style.Setters>
+    </Style>
 
 </ResourceDictionary>

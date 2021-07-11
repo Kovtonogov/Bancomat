@@ -9,30 +9,28 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Windows.Media.Animation;
-using Test.Model;
 
-namespace Test
+namespace Test.Dialog
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для TakeResult4.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class TakeResult4 : Window
     {
-        public MainWindow()
+        public TakeResult4()
         {
             InitializeComponent();
-            CreateBancomat createBancomat = new CreateBancomat();
-            createBancomat.Create();
-
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            this.DragMove();
-        }        
+            DragMove();
+        }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

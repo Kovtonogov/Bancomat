@@ -5,19 +5,19 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Test.Viw"
              mc:Ignorable="d" 
-             d:DesignHeight="700" d:DesignWidth="400">
+             Height="700" Width="450">
     <Border Name="loyaut" Background="#FF332E66" CornerRadius="20"   >
 
         <Grid x:Name="client">
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.1*"/>
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -25,41 +25,80 @@
                 <RowDefinition Height="0.1*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.13*"/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
-                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="0.13*"/>
             </Grid.ColumnDefinitions>
 
-            <Button x:Name="give"
+            <Button 
+                    Content="100"
                     Grid.Row="6" 
                     Grid.Column="1" 
-                    Grid.ColumnSpan="3" 
-                    Content="Give Many" 
+                    Grid.ColumnSpan="2"                     
                     Style="{StaticResource Button}" 
                     FontSize="28"
-                    Command="{Binding Give}"/>
+                    Command="{Binding Hundred}"/>
 
-            <Button x:Name="Balans"
-                    Grid.Row="8" 
+            <Button 
+                    Content="500"
+                    Grid.Row="6" 
+                    Grid.Column="3" 
+                    Grid.ColumnSpan="2"                     
+                    Style="{StaticResource Button}" 
+                    FontSize="28"
+                    Command="{Binding Fhundred}"/>
+
+
+
+            <Button 
+                    Content="10"
+                    Grid.Row="4" 
                     Grid.Column="1" 
-                    Grid.ColumnSpan="3" 
-                    Content="Balans" 
+                    Grid.ColumnSpan="2" 
                     Style="{StaticResource Button}" 
                     FontSize="28"
-                    Command="{Binding ChangeHeadTextCommand}"/>
+                    Command="{Binding One}"/>
+
+            <Button 
+                    Content="50"
+                    Grid.Row="4" 
+                    Grid.Column="3" 
+                    Grid.ColumnSpan="2"                     
+                    Style="{StaticResource Button}" 
+                    FontSize="28"
+                    Command="{Binding Fifty}"/>
 
 
-            <Button x:Name="Back"
+            <Button 
+                    Content="Back" 
+                    x:Name="Back"
                     Grid.Row="10" 
                     Grid.Column="1" 
-                    Grid.ColumnSpan="3" 
-                    Content="Back" 
+                    Grid.ColumnSpan="4"                     
                     Style="{StaticResource Button}" 
                     FontSize="28"
                     Command="{Binding Back}"/>
-        </Grid>
 
+            <Button 
+                    Content="OK" 
+                    Grid.Row="8" 
+                    Grid.Column="1" 
+                    Grid.ColumnSpan="4"                     
+                    Style="{StaticResource Button}" 
+                    FontSize="28"
+                    Command="{Binding Result}"/>
+            <Button  
+                    Grid.Row="2" 
+                    Grid.Column="1" 
+                    Grid.ColumnSpan="4" 
+                    Content="Take Many" 
+                    Style="{StaticResource ButtonId2}" 
+                    FontSize="28"
+                    />
+            
+        </Grid>
     </Border>
 </UserControl>

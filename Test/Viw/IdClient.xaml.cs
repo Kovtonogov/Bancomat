@@ -10,15 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Media.Animation;
+using Test.VM;
 
-namespace Test
+namespace Test.Viw
 {
     /// <summary>
     /// Логика взаимодействия для IdClient.xaml
     /// </summary>
-    public partial class IdClient : Window
+    public partial class IdClient : UserControl
     {
         public IdClient()
         {
@@ -45,24 +47,17 @@ namespace Test
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            this.DragMove();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.DragMove();
         }
 
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
             PasBlock.Visibility = Visibility.Hidden;
+            if (this.DataContext != null)
+            { ((dynamic)this.DataContext).Password = ((PasswordBox)sender).Password; }
         }
 
-        private void Clouse_Click(object sender, RoutedEventArgs e)
-        {
-            this.Owner.Close();
-            this.Close();
-        }
-
-        private void Log_Click(object sender, RoutedEventArgs e)
-        {
-
-            this.Close();
-        }
+       
     }
 }
