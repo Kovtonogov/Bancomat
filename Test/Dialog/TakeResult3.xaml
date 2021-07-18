@@ -10,7 +10,7 @@
         AllowsTransparency="True"      
         MouseLeftButtonDown="Window_MouseLeftButtonDown"
         WindowStartupLocation="CenterScreen"
-        Title="TakeResult3" Height="450" Width="800">
+        Title="TakeResult3" Height="150" Width="300">
 
     <Border  Background="#FF4670B8" CornerRadius="20"   >
 
@@ -46,9 +46,9 @@
                     Grid.Column="1" 
                     Grid.ColumnSpan="5" 
                     Grid.RowSpan="2" 
-                    Content="ERROR" 
+                    Content="Not enough money at the ATM" 
                     Style="{StaticResource Button}" 
-                    FontSize="30"
+                    FontSize="20"
                     />
 
         </Grid>

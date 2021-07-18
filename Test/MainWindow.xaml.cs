@@ -21,10 +21,13 @@ namespace Test
     /// </summary>
     public partial class MainWindow : Window
     {
+        
+
         public MainWindow()
         {
-            InitializeComponent();
-            CreateBancomat createBancomat = new CreateBancomat();
+            
+            InitializeComponent();                       
+            CreateBancomat createBancomat = new CreateBancomat();            
             createBancomat.Create();
 
         }

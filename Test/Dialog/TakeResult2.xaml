@@ -45,9 +45,9 @@
                     Grid.Column="1" 
                     Grid.ColumnSpan="5" 
                     Grid.RowSpan="2" 
-                    Content="ERROR" 
+                    Content="Not enough money on the balance" 
                     Style="{StaticResource Button}" 
-                    FontSize="30"
+                    FontSize="20"
                     />
 
         </Grid>
