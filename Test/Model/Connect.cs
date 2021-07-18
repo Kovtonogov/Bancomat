@@ -1,5 +1,4 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading.Tasks;
@@ -8,9 +7,9 @@ namespace Test.Model
 {
     class Connect
     {
-        // адрес и порт сервера, к которому будем подключаться
-        int port = 8005; // порт сервера
-        string address = "176.51.111.250"; // адрес сервера
+        
+        int port = 8005; 
+        string address = "176.51.111.250"; 
 
 
         public async Task<string> ConnectingAsync()
@@ -28,17 +27,17 @@ namespace Test.Model
                 IPEndPoint ipPoint = new IPEndPoint(IPAddress.Parse(address), port);
 
                 Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-                // подключаемся к удаленному хосту
+               
                 socket.Connect(ipPoint);
                 
                 string message = "mister";
                 byte[] data = Encoding.Unicode.GetBytes(message);
                 socket.Send(data);
 
-                // получаем ответ
-                data = new byte[256]; // буфер для ответа
+                
+                data = new byte[256]; 
                 StringBuilder builder = new StringBuilder();
-                int bytes = 0; // количество полученных байт
+                int bytes = 0; 
 
                 do
                 {
@@ -52,7 +51,7 @@ namespace Test.Model
                     
                 }
 
-                // закрываем сокет
+                
                 socket.Shutdown(SocketShutdown.Both);
                 socket.Close();
             }

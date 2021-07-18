@@ -1,5 +1,4 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 using Microsoft.Data.SqlClient;
 
 namespace Test.Model
@@ -15,11 +14,11 @@ namespace Test.Model
             try
             {
                 SqlConnection connection = new SqlConnection(connectionString);
-                // Создаем объект DataAdapter
+                
                 SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
-                // Создаем объект Dataset
+                
                 DataSet ds = new DataSet();
-                // Заполняем Dataset
+                
                 adapter.Fill(ds);
 
             }

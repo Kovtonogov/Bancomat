@@ -7,7 +7,6 @@ using Test.Model;
 using Test.Dialog;
 
 
-
 namespace Test.VM
 {
 
