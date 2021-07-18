@@ -66,7 +66,7 @@ namespace Test.Model
             string max = "";
 
             string[] wordss = line.Split(new char[] { ' ' });
-            for (int i = 0; i < wordss.Length - 1; i++)
+            for (int i = 0; i < wordss.Length; i++)
             {
                 switch (i)
                 {
@@ -95,7 +95,7 @@ namespace Test.Model
 
             if ((One <= 150) & (fifty <= 150) & (hundred <= 150) & (fhundred <= 150))
             {
-                line = One + " " + fifty + " " + hundred + " " + fhundred + " ";
+                line = One + " " + fifty + " " + hundred + " " + fhundred;
                 
 
                 using (FileStream fs = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
@@ -211,7 +211,7 @@ namespace Test.Model
 
                     if (m == bank)
                     {
-                        for (int i = 0; i < words.Length - 1; i++)
+                        for (int i = 0; i < words.Length; i++)
                         {
                             switch (i)
                             {

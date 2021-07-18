@@ -31,7 +31,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>portable</DebugType>
+    <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
@@ -164,10 +164,14 @@
     <Compile Include="Model\Bancomat.cs" />
     <Compile Include="Model\Client.cs" />
     <Compile Include="Model\ClientServer.cs" />
+    <Compile Include="Model\Connect.cs" />
     <Compile Include="Model\CreateBancomat.cs" />
     <Compile Include="Model\DataBase.cs" />
-    <Compile Include="Utils\Conect.cs" />
+    <Compile Include="Model\TestConnect.cs" />
     <Compile Include="Utils\RelayCommand.cs" />
+    <Compile Include="Viw\Acces.xaml.cs">
+      <DependentUpon>Acces.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Viw\Balans.xaml.cs">
       <DependentUpon>Balans.xaml</DependentUpon>
     </Compile>
@@ -224,6 +228,10 @@
     <Page Include="Theme\Field.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Viw\Acces.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Viw\Balans.xaml">
       <SubType>Designer</SubType>

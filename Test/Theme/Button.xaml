@@ -13,7 +13,7 @@
                                   HorizontalAlignment="Center"
                                   Background="Transparent">
                                 <TextBlock Text="{TemplateBinding Content}"
-                                    VerticalAlignment="Center" Foreground="White" FontWeight="Bold" FontStyle="Italic" />
+                                    VerticalAlignment="Center" Foreground="White" FontWeight="Bold" FontStyle="Italic" TextWrapping="Wrap" TextAlignment="Center" />
 
 
                             </Grid>                            
@@ -81,6 +81,29 @@
                                   HorizontalAlignment="Center"
                                   Background="Transparent">
                                 <TextBlock Text="{Binding Sum}"
+                                    VerticalAlignment="Center" TextAlignment="Center" Foreground="White" FontWeight="Bold" FontStyle="Italic" TextWrapping="Wrap" />
+
+
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style.Setters>
+    </Style>
+
+    <Style TargetType="{x:Type Button}"
+           x:Key="Loading">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="25" BorderBrush="CadetBlue" BorderThickness="0"
+                            Background="#FF4670B8" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" >
+                            <Grid VerticalAlignment="Center"
+                                  HorizontalAlignment="Center"
+                                  Background="Transparent">
+                                <TextBlock Text="{TemplateBinding Content}"
                                     VerticalAlignment="Center" TextAlignment="Center" Foreground="White" FontWeight="Bold" FontStyle="Italic" TextWrapping="Wrap" />
 
 

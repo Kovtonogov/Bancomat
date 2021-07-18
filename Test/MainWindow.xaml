@@ -11,7 +11,8 @@
         AllowsTransparency="True"      
         MouseLeftButtonDown="Window_MouseLeftButtonDown"
         WindowStartupLocation="CenterScreen"
-        Title="MainWindow">    
+        Title="MainWindow"
+        Height="700">    
   
     
     <Grid x:Name="loyaout">

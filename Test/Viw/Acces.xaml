@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="Test.Viw.Acces"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Test.Viw"
+             mc:Ignorable="d" 
+             Height="450" Width="800">
+    
+    <Border x:Name="loadingscreen" Background ="#FF4670B8" CornerRadius="20"  >
+        <Grid x:Name="space" Visibility="Hidden">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button Content="Loading"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    FontSize="40"
+                    Style="{StaticResource Loading}"
+                    x:Name="Loading"
+                    Click="Loading_Click"
+                    Command="{Binding TConnect}"/>
+            
+            <Button x:Name="Clouse" 
+                Content="Exit" 
+                Grid.Column="1" 
+                Grid.Row="2"
+                FontSize="25" 
+                Style="{StaticResource Loading}" 
+                Command="{Binding Exit}"
+                />
+        </Grid>        
+    </Border>
+</UserControl>

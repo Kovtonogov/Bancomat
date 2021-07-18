@@ -18,7 +18,7 @@ namespace Test.Model
             if (!dirInfo.Exists)
             {
                 dirInfo.Create();
-                text = "100 100 100 100";
+                text = "100 50 20 10";
                 using (FileStream fstream = new FileStream($"{Path}\\Bank.txt", FileMode.OpenOrCreate))
                 {
                     // преобразуем строку в байты

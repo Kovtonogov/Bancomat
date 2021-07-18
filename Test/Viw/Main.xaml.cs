@@ -49,8 +49,7 @@ namespace Test.Viw
 
         private void ButtonAnimation_Completed(object sender, EventArgs e)
         {
-            client.Visibility = Visibility.Visible;
-           
+            client.Visibility = Visibility.Visible;           
          
         }
 

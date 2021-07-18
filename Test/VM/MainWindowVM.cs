@@ -16,6 +16,7 @@ namespace Test.VM
         public event EventHandler EventCloseWindow;
         public void CloseWindow() => EventCloseWindow?.Invoke(this, EventArgs.Empty);
 
+        TestConnect testconnect = new TestConnect();
 
         private UserControl view;
         public UserControl UserInterface
@@ -24,7 +25,10 @@ namespace Test.VM
             {
                 if (view == null)
                 {
-                    view = new IdClient();
+                    if (testconnect.read() == true)
+                        view = new IdClient();
+                    else
+                        view = new Acces(0);
 
                 }
                 return view;
@@ -351,6 +355,23 @@ namespace Test.VM
             return sum; 
         }
 
+        private RelayCommand _TConnect;
+        public RelayCommand TConnect
+        {
+            get
+            {
+                return _TConnect ??
+                  (_TConnect = new RelayCommand(obj =>
+                  {
+                      if (testconnect.read() == true)
+                          view = new IdClient();
+                      else
+                          view = new Acces(1);
+
+                      OnPropertyChanged("UserInterface");
+                  }));
+            }
+        }
 
     }
 }
