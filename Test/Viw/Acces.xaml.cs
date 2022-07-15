@@ -28,7 +28,7 @@ namespace Test.Viw
             else
             {
                 space.Visibility = Visibility.Visible;
-                Con();
+                //Con();
             }
 
         }
