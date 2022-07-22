@@ -11,7 +11,7 @@ namespace Test.Model
         public string read(string login)
         {
             string line = null;
-            string connectionString = "Server=tcp:bancomatserver.database.windows.net,1433;Initial Catalog=Bancomat;Persist Security Info=False;User ID=MiseterxXx;Password=4554,Futkm364554;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            string connectionString = "Server=tcp:bancomatserver.database.windows.net,1433;Initial Catalog=Bancomat;Persist Security Info=False;User ID=MiseterxXx;Password={};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             string sql = $"SELECT (money) FROM Balans WHERE login='{login}'";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
